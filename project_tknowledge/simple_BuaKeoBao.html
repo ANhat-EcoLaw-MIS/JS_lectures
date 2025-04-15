@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        #main button:hover{
+            cursor: pointer;
+            background-color: blue;
+            font-weight: bolder;
+            color:white;
+        }
+        #main button:active{
+            background-color: red;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(event) {
+            const game = document.querySelector('#gameForm');
+            let computerMove = '';
+            game.addEventListener("submit", pickComputerMove);
+
+            function pickComputerMove(event) {
+                event.preventDefault();
+                const randomNumber = Math.random();
+                if (randomNumber > 0 && randomNumber < 1 / 3) {
+                    computerMove = 'Búa';
+                } else if (randomNumber < 2 / 3) {
+                    computerMove = 'Kéo';
+                } else {
+                    computerMove = 'Bao';
+                }
+                console.log(computerMove, 'after being selected');
+            }
+        }, false);
+    </script>
+    <title>Búa kéo bao huhu !</title>
+</head>
+<body style="font-size:20pt; text-align: center;">
+<header>
+    <p>
+        Welcome to Búa Kéo Bao - từ JavaScript...
+    </p>
+    <p>
+        Hãy chọn cái mà bạn muốn đi ạ !
+    </p>
+</header>
+<main id="main" style="border:1px solid black; padding: 10px; align-self: center; width:30%; margin: auto;">
+    <p><small>Bạn đã chọn...</small></p>
+    <form id="gameForm">
+        <button>Búa</button>
+        <button>Kéo</button>
+        <button>Bao</button>
+    </form>
+</main>
+
+</body>
+</html>
