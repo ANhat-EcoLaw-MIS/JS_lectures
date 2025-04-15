@@ -1,0 +1,61 @@
+#header-container{
+    padding: 10px;
+    border: 1px solid gray;
+    background-color: #cfff46;
+    overflow: clip;
+}
+#main-container{
+    padding: 10px;
+    margin-top: 20px;
+    border: 2px dashed #cfff46;
+}
+
+#main-container:hover{
+    background-color: #cfff46;
+    border-color: white;
+}
+#footer-container{
+    padding: 10px;
+    margin-top: 150px;
+    border-top: 2px solid #cfff46;
+}
+
+#a-footer:link{
+    text-decoration: none;
+    background-color: #cfff46;
+    color: black;
+}
+#a-footer:hover{
+    color: white;
+    background-color: #cfff49;
+}
+#a-footer:visited{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+}
+
+header{
+    text-align: center;
+    justify-content: space-evenly;
+}
+
+.beautiful-font{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20pt;
+}
+.for-form{
+    text-align: center;
+}
+.for-form > button:hover{
+    background-color: #cfff46;
+}
+.footer{
+    text-align: center;
+    font-size: 12pt;
+
+}
+h1::selection{
+    background-color: floralwhite;
+    color: #cfff46;
+}
