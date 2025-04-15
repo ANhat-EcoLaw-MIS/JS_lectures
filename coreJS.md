@@ -33,3 +33,6 @@ And what's not ?
 
 ### This keyword - Self keyword ! 
 (FIND MORE INFORMATION / INSIGHTS IN this_keyword.js) !
+
+### Copy: Shallow - Deep in JS
+(MORE INFORMATION / INSIGHTS IN copycats.js)
