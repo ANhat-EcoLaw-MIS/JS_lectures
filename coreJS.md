@@ -30,3 +30,6 @@ And what's not ?
 + labels, modules, namespaces and continuations...
 
 => The reason for a language to elevate some entities to be first-class comes down to which paradigms the language wants to support.
+
+### This keyword - Self keyword ! 
+(FIND MORE INFORMATION / INSIGHTS IN this_keyword.js) !
