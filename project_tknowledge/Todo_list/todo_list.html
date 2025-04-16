@@ -4,24 +4,53 @@
     <meta charset="UTF-8">
     <title>To-do List</title>
     <style>
+      .default-btn{
+          margin: 5px;
+          padding: 10px;
+          background-color: blueviolet;
+      }
+      .default-btn:hover{
+          cursor: pointer;
+          background-color: firebrick;
+      }
+      .default-btn:active{
+          background-color: lightskyblue;
+      }
+      .default-input{
+          margin: 10px;
+          padding: 10px;
+          font-size: 15px;
+      }
+      form{
+          margin: auto;
+          border: 1px solid black;
+          padding: 10px;
+      }
+      #input-field-task{
+      }
       #list{
-          width: 500px;
-          height: 300px;
-          overflow-block: auto;
+          margin: auto;
+          overflow: auto;
       }
       footer{
         margin-top: 50px;
       }
-      #list li{
-          padding: 10px;
+      #list p{
+          padding: 20px;
+          font-size: 15pt;
       }
-      #list li:hover{
+      #list p:hover{
           background-color: firebrick;
       }
-      #list li button{
-          margin-left: 80%;
+      #list p button{
+          margin-left: 45%;
           background-color: green;
           color: white;
+          padding: 10px;
+          border:none;
+      }
+      #list p label{
+          margin-left: 100px;
       }
     </style>
     <script>
@@ -30,15 +59,20 @@
         const button = document.getElementById("button-sub");
         const input_field = document.querySelector('label input');
         const list = document.getElementById("list");
+        const date_field = document.getElementById('input-field-date');
         button.addEventListener('click', function(event) {
           event.preventDefault();
-          let content = input_field.value;
-          list.innerHTML += `<li>${content}</li>`;
-          myArr.push(content);
-          console.log(myArr);
+          if (!(input_field.value && date_field.value)) {
+              document.querySelector('#p-alert').innerHTML = "Please enter a valid input";
+              return null;
+          }
+          let element = `<p>${input_field.value} <label>${date_field.value}</label><button>delete</button></p>`;
+          list.innerHTML += element;
+          // console.log(myArr);
         })
-        document.querySelector('#button-reset').addEventListener('click', function(event) {
+        document.querySelector('#button-reset').addEventListener('click', function() {
             list.innerHTML ='';
+            document.querySelector('#p-alert').innerHTML = "";
         })
       });
     </script>
@@ -49,14 +83,16 @@
 </header>
 <main>
   <form>
-    <label><input type="text" placeholder="What needs to be done?"></label>
-    <input id="button-sub" type="submit" value="Add task !">
-      <input id="button-reset" type="reset" value="Reset">
+    <label><input id="input-field-task" class="default-input" type="text" placeholder="What needs to be done?"></label>
+      <label><input class="default-input" id = "input-field-date" type="date"></label>
+    <input class="default-btn" id="button-sub" type="submit" value="Add task !">
+      <input class="default-btn" id="button-reset" type="reset" value="Reset">
   </form>
+    <p id="p-alert" style="color: red;"></p>
 </main>
 <footer>
-  <p>current list !</p>
-  <ol id="list"></ol>
+  <p style="font-size:15pt; font-family: 'Courier New',serif; font-weight:bold;">current list !</p>
+  <div id="list"></div>
 </footer>
 </body>
 </html>
