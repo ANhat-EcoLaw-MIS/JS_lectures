@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementsByClassName("normal-form").item(0);
+    const list=document.getElementById("footer-list");
     const validateInput = function(x){
         // console.log(x);
         // console.log(typeof parseInt(x));
@@ -16,10 +17,14 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return x + increment;
     }
+    let p = document.querySelector(".normal-form > p");
+    const normal_p = p.innerHTML;
     const updateTotal = function(total){
-        let p = document.querySelector(".normal-form > p");
         const default_value = p.innerText.substring(0,6);
         p.innerText = default_value + ' '+ total.toString() + '$';
+    }
+    const addToList=function(total){
+        list.innerHTML += `<li>${total}$</li>`;
     }
     form.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -30,5 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         const total = calculateTotal(userInput);
         updateTotal(total);
+        addToList(total);
+        document.getElementById("field-input").value = "";
     });
+    form.addEventListener("reset", function (event) {
+        p.innerHTML = normal_p;
+    })
 });

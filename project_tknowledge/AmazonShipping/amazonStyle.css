@@ -1,0 +1,43 @@
+body{
+    justify-items: center;
+}
+body > header{
+    text-align: center;
+    margin-bottom: 25px;
+    background-color: wheat;
+    font: bold 18px / 1.5 Georgia, serif;
+}
+main{
+    border: 2px solid black;
+    padding: 10px 20px;
+}
+
+.normal-form input{
+    height: 25px;
+}
+
+.button-s{
+    background-color:greenyellow;
+    border: none;
+    padding: -20px 25px;
+    font-size: 10pt;
+    cursor: pointer;
+}
+.button-s:hover{
+    background-color: yellow;
+}
+
+#container-footer{
+    margin-top: 10px;
+    width: 80%;
+    border: 1px solid black;
+    background-color: lightyellow;
+    padding-left: 100px;
+}
+#container-footer p{
+    font: bold 18px / 1.5 Georgia, serif;
+    font-size: 20pt;
+}
+#container-footer li{
+    font-size: 15pt;
+}

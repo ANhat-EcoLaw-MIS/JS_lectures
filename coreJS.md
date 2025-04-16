@@ -35,4 +35,13 @@ And what's not ?
 (FIND MORE INFORMATION / INSIGHTS IN this_keyword.js) !
 
 ### Copy: Shallow - Deep in JS
-(MORE INFORMATION / INSIGHTS IN copycats.js)
+(MORE INFORMATION / INSIGHTS IN copycats.js) !
+
+### DOM STRUCTURE: Window - Document - Console Object !
+These are objects that you'll likely come across...
++ Window object refers to the browser itself.
++ Document object refers to the entire webpage.
++ Console object refers to the console part (when we hit inspect).
+In not-strict mode, window and document are equivalent.
+Another thing: Window object is a SHORTCUT -> which means if that you don't have a dot preceding the particular element -> it's likely the 'window' object precedes it
+for instance, we have 'alert' keyword -> which actually is window.alert...

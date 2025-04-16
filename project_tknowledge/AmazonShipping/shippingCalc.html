@@ -13,14 +13,19 @@
   <main>
     <p>Orders under $40 = +$10 shipping</p>
     <p>Orders over $40 = Free Shipping !</p>
-    <form class="normal-form" onsubmit="">
+    <form class="normal-form">
       <label>
         <input autocomplete="off" autofocus id="field-input" type ='text' placeholder="Cost of order" required>
-        <input type="submit" value="Calculate">
-        <input type="reset" value="Reset">
+        <input class ="button-s" type="submit" value="Calculate">
+        <input class ="button-s" type="reset" value="Reset">
       </label>
       <p>Total: ...</p>
     </form>
   </main>
+  <footer id="container-footer">
+      <p style="text-decoration-line: underline;">Lịch sử chi tiêu</p>
+      <ol id="footer-list">
+      </ol>
+  </footer>
 </body>
 </html>
