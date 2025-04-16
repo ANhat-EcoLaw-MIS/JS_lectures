@@ -6,10 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
-        const myButton = document.querySelector('button');
-        myButton.addEventListener('click', function() {
-            console.log("Hello World!");
-        })
+            let userName = prompt("Please enter your name:", "");
+            console.log('so your name is' + userName);
+            const myButton = document.querySelector('button');
+            console.log(myButton.innerText);
+            // innerText -> lấy only the text
+            // inner HTML -> lấy hết luôn cái gì có trong cái element đó (khoảng trắng, function...)
+            myButton.addEventListener('click', function() {
+                alert('Hello ! '+userName);
+            });
         }, false);
     </script>
     <title>Document Object Model</title>
