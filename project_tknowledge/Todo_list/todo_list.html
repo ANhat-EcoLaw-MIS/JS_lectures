@@ -5,14 +5,27 @@
     <title>To-do List</title>
     <style>
       #list{
-        border: 1px solid black;
+          width: 500px;
+          height: 300px;
+          overflow-block: auto;
       }
       footer{
         margin-top: 50px;
       }
+      #list li{
+          padding: 10px;
+      }
+      #list li:hover{
+          background-color: firebrick;
+      }
+      #list li button{
+          margin-left: 80%;
+          background-color: green;
+          color: white;
+      }
     </style>
     <script>
-      document.addEventListener("DOMContentLoaded", function(event) {
+      document.addEventListener("DOMContentLoaded", function() {
         const myArr = [];
         const button = document.getElementById("button-sub");
         const input_field = document.querySelector('label input');
@@ -22,14 +35,15 @@
           let content = input_field.value;
           list.innerHTML += `<li>${content}</li>`;
           myArr.push(content);
-
           console.log(myArr);
         })
-
+        document.querySelector('#button-reset').addEventListener('click', function(event) {
+            list.innerHTML ='';
+        })
       });
     </script>
 </head>
-<body>
+<body style="background-color: whitesmoke;">
 <header>
   <h1>To-do List</h1>
 </header>
@@ -37,8 +51,8 @@
   <form>
     <label><input type="text" placeholder="What needs to be done?"></label>
     <input id="button-sub" type="submit" value="Add task !">
+      <input id="button-reset" type="reset" value="Reset">
   </form>
-
 </main>
 <footer>
   <p>current list !</p>

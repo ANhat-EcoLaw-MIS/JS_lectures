@@ -8,12 +8,18 @@
         document.addEventListener("DOMContentLoaded", function(event) {
             let userName = prompt("Please enter your name:", "");
             console.log('so your name is' + userName);
+            const first_p = document.getElementById('first');
+            const second_p = document.getElementById('second');
             const myButton = document.querySelector('button');
             console.log(myButton.innerText);
             // innerText -> lấy only the text
             // inner HTML -> lấy hết luôn cái gì có trong cái element đó (khoảng trắng, function...)
             myButton.addEventListener('click', function() {
                 alert('Hello ! '+userName);
+            });
+            myButton.addEventListener('click', function() {
+                first_p.innerHTML = `this is the DOM structure manipulation -> ${document.body}`;
+                second_p.innerHTML =`this is the body HTML -> ${document.body.innerHTML}`;
             });
         }, false);
     </script>
@@ -23,6 +29,10 @@
     <button>
         Click Me
     </button>
+<main>
+    <p id="first"></p>
+    <p id="second"></p>
+</main>
 
 </body>
 </html>

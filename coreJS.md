@@ -45,3 +45,14 @@ These are objects that you'll likely come across...
 In not-strict mode, window and document are equivalent.
 Another thing: Window object is a SHORTCUT -> which means if that you don't have a dot preceding the particular element -> it's likely the 'window' object precedes it
 for instance, we have 'alert' keyword -> which actually is window.alert...
+Last but not least, when you copy the inner HTML, you can't actually copy the functionalities / dependencies that come with the element, as it's just plain text !
+
+### ADVANCED FUNCTIONS KNOWLEDGE:
+#### Callback functions:
+(FIND MORE INFORMATION ABOUT IT ON subtlety/callback.js)
+As functions are first class entity, a well-rounded knowledge about advanced functions is crucial for better code...
+Some properties of call-back function: 
++ passed as an argument.
++ Executed Later (Deferred execution).
++ Access outer-scope.
++ Often Anonymous.
