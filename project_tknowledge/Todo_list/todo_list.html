@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-do List</title>
+    <style>
+      #list{
+        border: 1px solid black;
+      }
+      footer{
+        margin-top: 50px;
+      }
+    </style>
+    <script>
+      document.addEventListener("DOMContentLoaded", function(event) {
+        const myArr = [];
+        const button = document.getElementById("button-sub");
+        const input_field = document.querySelector('label input');
+        const list = document.getElementById("list");
+        button.addEventListener('click', function(event) {
+          event.preventDefault();
+          let content = input_field.value;
+          list.innerHTML += `<li>${content}</li>`;
+          myArr.push(content);
+
+          console.log(myArr);
+        })
+
+      });
+    </script>
+</head>
+<body>
+<header>
+  <h1>To-do List</h1>
+</header>
+<main>
+  <form>
+    <label><input type="text" placeholder="What needs to be done?"></label>
+    <input id="button-sub" type="submit" value="Add task !">
+  </form>
+
+</main>
+<footer>
+  <p>current list !</p>
+  <ol id="list"></ol>
+</footer>
+</body>
+</html>
