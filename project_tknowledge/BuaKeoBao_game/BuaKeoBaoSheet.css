@@ -1,0 +1,26 @@
+#main button:hover{
+    cursor: pointer;
+}
+#main button:active{
+    background-color: red;
+}
+#main{
+    align-self: center;
+    border: 2px solid white;
+    padding: 20px;
+}
+
+#gameForm{
+    border: 2px solid white;
+    padding: 20px;
+}
+
+.choice-button{
+    width: 32%;
+    border: 2px solid white;
+    border-radius: 60px;
+    height: 120px;
+    color: transparent;
+    background: transparent no-repeat center;
+    background-size: 100px 100px;
+}
