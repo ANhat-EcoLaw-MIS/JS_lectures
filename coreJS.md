@@ -56,3 +56,24 @@ Some properties of call-back function:
 + Executed Later (Deferred execution).
 + Access outer-scope.
 + Often Anonymous.
+
+#### CLOSURES:
+(FIND MORE INFORMATION ABOUT IT ON subtlety/closure.js)
+Closures are functions that have formed "closures" to outer source of data.
+You might be familiar with the term "closure" on outer function, inner function in Python. And this thing here is pretty much the same.
+Unlike stack calls, closures are back-boned by heap memory (which lives long) -> therefore, they can reference data from one to another.
+Yet, closures are quite expensive to use (more memory and processing power).
+But there are practical reasons to use it | You can examine the closure.js for these practical reasons use case.
+
+
+#### Single Threaded JavaScript - Node.js.
+
+#### ASYNCHRONOUS - SYNCHRONOUS code.
+
+#### The event loop - event queue - FIFO.
+
+#### The call stack - LIFO.
+
+#### ASYNC finishing its promise -> SYNCHRONOUSLY BACK TO THE EVENT QUEUE.
+
+
