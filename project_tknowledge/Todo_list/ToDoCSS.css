@@ -1,0 +1,69 @@
+header{
+    text-align: center;
+}
+header h1{
+    font: bold 32.5pt/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-decoration-line: underline;
+}
+main {
+    margin: 25px 150px;
+}
+form{
+    padding: 25px 25px;
+    border: 2px solid #ccc;
+}
+fieldset{
+    border: 2px solid black;
+    padding: 25px 40px;
+    border-radius: 5px;
+}
+legend{
+    font: bold 14.5pt/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background-color: greenyellow;
+    border: 3px solid  green;
+    padding: 5px;
+    border-radius: 5px;
+}
+fieldset label{
+    margin-inline: 5px 10px;
+}
+fieldset input{
+    padding: 10px;
+}
+#button{
+    padding-right: 25px;
+    font-size: 10pt;
+    background-color: #cfff46;
+    border: none;
+    cursor: pointer;
+}
+#button:hover{
+    background-color:green;
+    border: 1px solid black;
+    color: white;
+}
+.todo-grid{
+    margin: 25px auto;
+    border: 1px black solid;
+    padding: 10px 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 25px;
+}
+.task-list{
+    font-size: 12pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.date-list{
+    font-size: 12pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+.button-delete{
+    background-color: #cfff46;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 7px;
+}

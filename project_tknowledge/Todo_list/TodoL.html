@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="ToDoCSS.css" type="text/css">
+  <script src="TodoScripts.js"></script>
+    <title>MY TO-DO LIST</title>
+</head>
+<body>
+ <header>
+   <h1>TO-DO LIST</h1>
+ </header>
+<main>
+  <form>
+    <fieldset>
+      <legend>To-Do List</legend>
+      <input id ="task" type="text" placeholder="What needs to be done ?">
+      <label for="task"></label>
+      <input id="date" type="date">
+      <label for="date"></label>
+      <input id="button" type="submit" value="submit">
+      <p id="status" hidden>Please enter valid input !</p>
+    </fieldset>
+  </form>
+  <div id = "list" class ="todo-grid">
+  </div>
+</main>
+</body>
+</html>

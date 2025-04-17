@@ -1,3 +1,4 @@
+<!-- this is basically a very poor version of the website !-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,7 @@
       .default-btn{
           margin: 5px;
           padding: 10px;
-          background-color: blueviolet;
+          background-color: dodgerblue;
       }
       .default-btn:hover{
           cursor: pointer;
@@ -22,15 +23,15 @@
           font-size: 15px;
       }
       form{
-          margin: auto;
+          margin-right: 600px;
           border: 1px solid black;
           padding: 10px;
       }
-      #input-field-task{
-      }
+
       #list{
-          margin: auto;
-          overflow: auto;
+          border: 1px solid black;
+          margin-right: 600px;
+          overflow: scroll;
       }
       footer{
         margin-top: 50px;
@@ -43,11 +44,15 @@
           background-color: firebrick;
       }
       #list p button{
-          margin-left: 45%;
+          margin-left: 50%;
           background-color: green;
           color: white;
           padding: 10px;
           border:none;
+      }
+      #list p button:hover{
+          cursor: pointer;
+          background-color: lightskyblue;
       }
       #list p label{
           margin-left: 100px;
@@ -55,20 +60,51 @@
     </style>
     <script>
       document.addEventListener("DOMContentLoaded", function() {
-        const myArr = [];
+        let myArr = [];
+        let increment = 0;
         const button = document.getElementById("button-sub");
         const input_field = document.querySelector('label input');
         const list = document.getElementById("list");
         const date_field = document.getElementById('input-field-date');
+        const deleteItem = function (id) {
+            console.log('item when deleting', id);
+            myArr = myArr.filter(item => item.id !== id);
+            console.log('After deleting', myArr);
+            renderList(myArr);
+        }
+        const renderList = (arr) => {
+            list.innerHTML = '';
+            arr.forEach((item) =>{
+                console.log('item id', item.id);
+                const p = document.createElement('p');
+                const label = document.createElement('label');
+                const btn = document.createElement('button');
+                p.textContent = item.task;
+                label.textContent = item.date;
+                btn.textContent = 'Delete';
+                btn.dataset.id =item.id;
+                btn.addEventListener('click',() => deleteItem(item.id)); // item id là incrementing
+                p.appendChild(label); // add vào cái label - cái btn mình đã tạo
+                p.appendChild(btn);
+                list.appendChild(p);
+            });
+
+        }
         button.addEventListener('click', function(event) {
           event.preventDefault();
           if (!(input_field.value && date_field.value)) {
               document.querySelector('#p-alert').innerHTML = "Please enter a valid input";
               return null;
           }
-          let element = `<p>${input_field.value} <label>${date_field.value}</label><button>delete</button></p>`;
-          list.innerHTML += element;
-          // console.log(myArr);
+            const newItem={
+              task: input_field.value,
+              date: date_field.value,
+              id: increment
+          }
+          myArr.push(newItem);
+          increment++;
+          console.log(myArr);
+          renderList(myArr);
         })
         document.querySelector('#button-reset').addEventListener('click', function() {
             list.innerHTML ='';
@@ -77,7 +113,7 @@
       });
     </script>
 </head>
-<body style="background-color: whitesmoke;">
+<body style="background-color: white;">
 <header>
   <h1>To-do List</h1>
 </header>
