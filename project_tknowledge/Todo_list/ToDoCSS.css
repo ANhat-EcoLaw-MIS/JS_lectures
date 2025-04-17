@@ -45,15 +45,18 @@ fieldset input{
 .todo-grid{
     margin: 25px auto;
     border: 1px black solid;
-    padding: 10px 40px;
+    padding: 10px 60px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 25px;
+    column-gap: 25px;
+    align-items: center;
 }
 .task-list{
     font-size: 12pt;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
+    overflow: hidden;
 }
 .date-list{
     font-size: 12pt;
@@ -65,5 +68,11 @@ fieldset input{
     color: black;
     border: none;
     cursor: pointer;
-    padding: 7px;
+    padding-bottom: 7px;
+    padding-top: 7px;
+}
+#status{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:red;
 }

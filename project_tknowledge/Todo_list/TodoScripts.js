@@ -44,7 +44,13 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('list').append(div,div2,button);
         });
     }
+    const reset = function(fullReset = false){
+        document.querySelector('form').reset();
 
+        if (fullReset===true){
+            document.getElementById('list').innerHTML = '';
+        }
+    }
     let myArr = [];
     let increment = 0;
     const task_input = document.getElementById('task');
@@ -62,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
             };
             myArr.push(newItem);
             renderList();
+            reset();
         }
     });
 })
