@@ -1,9 +1,9 @@
 /*
 Objects are key-value pairs, where each key is typically a string (or Symbol) and each value can be assigned to
-any value !
+any value!
  */
 
-// Creating objects in JavaScript !
+// Creating objects in JavaScript!
 const myBankObj = { // Create using declarations | Object literal !
     account_id: 1,
     account_name: "John",
@@ -13,7 +13,7 @@ const myBankObj = { // Create using declarations | Object literal !
     withdraw: function(){console.log("Withdraw...");}
 };
 
-// this is a constructor function that uses new keyword to create a new object.
+// this is a constructor function that uses 'new' keyword to create a new object.
 function BingXue(name, price) {
     this.name = name;
     this.price = price;
