@@ -239,6 +239,26 @@ Fetch API provides a modern and flexible way to make network requests (like HTTP
 from the browser or Node.js. 
 It is built upon Promises and handles async code efficiently.
 
+Programming guidance: when to use - why to use
+
+Essence: As Promise objects are things that come from the future, this asynchronous behavior 
+can serve multiple purposes.
+If leveraged wisely, you can think of Promise objects as 'the future' in the code.
+
+When:
++ Fetching data from API.
++ Reading files.
++ Working with databases.
++ Animations—timed events.
+
+Why: 
+Without promise objects, you often rely on callbacks to make things asynchronous, which causes "callback hell,"
+where nested call-backs become difficult to maintain and read.
+
+⇒ the most powerful usage of promise objects is to handle asynchronous problems,
+as promise objects create a separate thread to execute what is promised until resolved.
+
+
 #### ASYNC - AWAITS in JS
 
 #### SERVER-SIDE HANDLING
