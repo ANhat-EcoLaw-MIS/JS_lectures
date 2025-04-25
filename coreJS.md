@@ -162,23 +162,84 @@ The backbone of JS OOP derives from its prototypal nature.
 
 #### Prototype nature of the Language.
 (Get more information at Paradigms/PrototypalNature.js)
+Prototypes had been the 'old way' to achieve things similar to OOP in JavaScript before the official support was introduced.
+In essence, prototyping is the practice of creating new objects based on existing objects,
+and this calls forth the advent of 'inheritance.'
+Instead of creating a blueprint, you create the object that other later objects could rely on.
 
+In JavaScript, almost every object has a prototype (an ancestor)—[[Prototype]] thingy
+that links every object together in a **chain**.
+When you reference a property or method, the process of looking up is initiated, start from the bottom
+up to the root ancestor | prototype.
 
-#### Functional Programming—Exporting functions:
+'prototype chain' refers to the fact that objects are linked together through a chain
+that is powered by the prototype mechanism | the process of looking up...
 
+Nowadays, prototype stuff has been pretty overshadowed by a great deal of fancier stuff out there, 
+yet having known it a bit might help you better and avoid confusion.
+
+Several things to take into account:
++ Prototypal Inheritance.
++ Prototype property of constructor functions.
+
+#### Functional Programming—Exporting functions.
+(More information is found at 'Paradigms/Functional.js')
+We will get functional a lot by the time we stay suffered with JavaScript...
+JS is not a fully supported functional programming language.
+However, leveraging functional concepts can help write better code for maintaining.
+
+Functional programming is a paradigm using functions to do computation and avoid CAUSING SIDE EFFECTS.
+Side effects refer to 'external state' such as global variables, I/O performance.
+
+Core concepts: Pure functions, Immutability, First-Class and Higher-Order Functions.
+
+You can do Composition on Functions as functions are all value anyway...
+
+#### Best Practice—When to Use OOP, Functional.
+
+#### When to use Inheritance...
 **Next up is the basic of event handling and introduction to backend API**
 
 #### ASYNCHRONOUS - SYNCHRONOUS code.
+Synchronous code refers to the tasks are executed sequentially, in an order that helps the program run successfully.
+Asynchronous code refers to the tasks are executed in **parallel** to run the program successfully.
+
+Basically, what does asynchronous code do is that the code will be finished in the future and not disrupt the
+current thread.
 
 #### The event loop - event queue - FIFO.
+The event loop refers to the act of executing and handling events in the event queue following FIFO.
+
+When users call forth an event, the event is added into a queue data structure,
+which means that what event comes first is the one getting executed first.
+
+And an event calls forth a bunch of tasks that need to be handled.
 
 #### The call stack - the LIFO principle !.
+The call stack is the (most of the case) way that programming language handles code.
+This method calls for another method and callbacks are called sequentially, breaking the problems
+down to smaller bits easier to handle and digest.
+The process follows last in first out, which means the 'highest' part is broken down to the 'lowest' part,
+until there are no longer lower parts.
 
 #### ASYNC finishing its promise → SYNCHRONOUSLY BACK TO THE EVENT QUEUE.
+Async code is code that finishes later.
+When the promise is finally met, a trigger will be activated via putting the event back into the queue,
+the event loop keeps track of this and handles the event synchronously by pushing it to the call-stack.
+And due to the LIFO strategy of executing the stack, the promised event will be executed immediately.
 
 #### Promises—Fetch in JS
+(Find more at TechniqueKnowledge/PromisesFetch.js)
+Promises and Fetch are two mechanisms in JavaScript for 'connecting' to a backend.
 
-#### ASYNC - AWAITS
+Promises represent values, things that will be 'there' after the promises are resolved. 
+Basically a placeholder...
+
+Fetch API provides a modern and flexible way to make network requests (like HTTP requests)
+from the browser or Node.js. 
+It is built upon Promises and handles async code efficiently.
+
+#### ASYNC - AWAITS in JS
 
 #### SERVER-SIDE HANDLING
 Server-side can be understood as "Backend."
@@ -188,5 +249,11 @@ the client-side will request (via protocols like HTTP, HTTPS) the backend for da
 the server-side will then response to the request.
 This is called a request-response cycle.
 The thing powered this process is a server side language or tool, such as Node.js, Python | Django, Flask...
+
+#### FRONT-END last note:
++ DOM manipulation.
++ Event handling.
 **Node.js Specifics:**
+
+
 
